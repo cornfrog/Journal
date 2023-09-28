@@ -43,4 +43,5 @@ GITHUB COMMAND LINE NOTES
 [LIST GITHUB REPOS]
 	> gh repo list
 
-
+[CREATE GITHUB REPO]
+	> gh repo create 
