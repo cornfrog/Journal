@@ -1,0 +1,46 @@
+GITHUB COMMAND LINE NOTES
+------------------------------
+
+== SETTING UP SSH FOR GITHUB ==
+
+1.  FROM TERMINAL: 
+	a. ENTER COMMAND : > ssh-keygen -t ed25519 -C "your_email@email.com"
+	b. GO TO '~/.ssh/' : > cd ~/.ssh/
+	c. PRINT PUBLIC KEY : > cat ~/.ssh/id_ed25519.pub
+
+2. FROM GITHUB:
+	a. LOGIN : https://www.github.com/login
+	b. CLICK PROFILE ACCOUNT PICTURE (TOP RIGHT CORNER)
+	c. CLICK 'SETTINGS'
+	d. CLICK 'SSH and GPG keys'
+	e. CLICK 'New SSH Key'
+	f. ADD KEY TITLE
+	g. CHOOSE KEY TYPE
+	h. COPY '~/.ssh/id_ed25519.pub' OUTPUT AND PASTE INTO 'Key' TEXTAREA
+
+3. BACK TO TERMINAL
+	a. TEST GITHUB SSH CONNECTION :  ssh -T git@github.com
+	b. LOGIN TO GITHUB : gh auth login -h github.com
+	c. CHOOSE 'SSH'
+	d. CHOOSE '~/.ssh/id_ed25519.pub'
+	e. CHOOSE 'Login with a web browser'
+	f. TYPE CODE INTO GITHUB
+	g. CONFIM LOGIN STATUS: gh auth status
+		* SHOULD RETURN WITH '✓ Logged in to github.com as <USERNAME>'
+
+
+======== COMMANDS ===========
+
+[MAIN COMMAND OPERAND]
+	> gh 
+
+[CHECKING GITHUB LOGIN STATUS]
+	> gh auth status
+
+[LOGIN TO GITHUB]
+	> gh auth login -h github.com 
+
+[LIST GITHUB REPOS]
+	> gh repo list
+
+
